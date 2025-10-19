@@ -24,14 +24,15 @@ def create_app():
         }), 200 if db_ok else 500
 
     from routes.auth import bp as auth_bp
-    from routes.subscriptions import bp as subs_bp
     from routes.invoices import bp as invoices_bp
     from routes.usage import bp as usage_bp
+    from routes.subscriptions import bp as subscriptions_bp
 
     app.register_blueprint(auth_bp)
-    app.register_blueprint(subs_bp)
     app.register_blueprint(invoices_bp)
     app.register_blueprint(usage_bp)
+    app.register_blueprint(subscriptions_bp)
+
     
     @app.errorhandler(404)
     def not_found(_):
