@@ -1,0 +1,7 @@
+Flask==3.0.3
+Flask-Cors==5.0.0
+python-dotenv==1.0.1
+SQLAlchemy==2.0.34
+PyMySQL==1.1.1
+gunicorn==22.0.0
+cryptography==43.0.1
